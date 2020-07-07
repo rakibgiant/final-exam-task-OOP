@@ -1,7 +1,7 @@
 package petGameFinal;
-
+//extend super class
 public class Cat extends Pet {
-
+//use abstract 
   public void eat() {
     System.out.println("I eat mouse!");
   }
@@ -19,11 +19,11 @@ public class Cat extends Pet {
   }
 
   private String look;
-
+//get look
   public String getLook() {
     return look;
   }
-
+//set look
   public void setLook(String look) {
     this.look = look;
   }
