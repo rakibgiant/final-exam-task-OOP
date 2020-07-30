@@ -3,13 +3,14 @@ package petGameFinal;
 abstract class Pet {
   String name;
   int health;
-  int love, age;
-  int experience = 0;
+ int love, age;
+ int experience = 0;
+ String colour;
 
   public void print() {
     System.out.println(
-      "Hi my name is " +
-      this.name +
+      "The pet say! \n\tHi my name is " +
+      this.name +" my colour is "+this.colour+
       " my healgth is " +
       this.health +
       " intemence owner is " +
@@ -28,6 +29,12 @@ abstract class Pet {
 
   public void setName(String name) {
     this.name = name;
+  }
+  public String getColour(){
+    return colour;
+  }
+  public void setColour(String colour){
+    this.colour=colour;
   }
 
   public  int getExperience() {
@@ -86,4 +93,5 @@ abstract class Pet {
   public abstract void train();
 
   public abstract void game();
+  public abstract void sleep();
 }

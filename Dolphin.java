@@ -16,7 +16,10 @@ public class Dolphin extends Pet {
       public void game() {
         System.out.println("I play jumpth throu ring game .");
       }
+      public void sleep(){
+        System.out.println("I finished sleep. weak up after a beautiful sleep. ");
     
+      }
       private String type;
     
       public String getType() {

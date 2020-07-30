@@ -3,7 +3,7 @@ package petGameFinal;
 public class Dog extends Pet {
 
   public void eat() {
-    System.out.println("I eat a dog food.");
+    System.out.println("I eat  dog food.");
   }
 
   public void play() {
@@ -16,6 +16,10 @@ public class Dog extends Pet {
 
   public void game() {
     System.out.println("I play flaying disk game .");
+  }
+  public void sleep(){
+    System.out.println("I finished sleep. weak up after a beautiful sleep. ");
+
   }
 
   private String breed;

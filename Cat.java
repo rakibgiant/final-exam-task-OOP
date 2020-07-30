@@ -1,7 +1,7 @@
 package petGameFinal;
-//extend super class
+
 public class Cat extends Pet {
-//use abstract 
+
   public void eat() {
     System.out.println("I eat mouse!");
   }
@@ -17,13 +17,17 @@ public class Cat extends Pet {
   public void game() {
     System.out.println("I play flaying disk game .");
   }
+  public void sleep(){
+    System.out.println("I finished sleep. weak up after a beautiful sleep. ");
+
+  }
 
   private String look;
-//get look
+
   public String getLook() {
     return look;
   }
-//set look
+
   public void setLook(String look) {
     this.look = look;
   }

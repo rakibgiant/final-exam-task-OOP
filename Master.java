@@ -25,4 +25,7 @@ public class Master {
   public void game(Pet pet) {
     pet.game();
   }
+  public void sleep(Pet pet){
+    pet.sleep();
+  }
 }

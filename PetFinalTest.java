@@ -6,8 +6,10 @@ public class PetFinalTest {
 
   public static void main(String[] args) {
     Scanner input = new Scanner(System.in);
-    //Pet pt = new Pet();
-    int experience=0;
+    // Pet pt = new Pet();
+    String colour;
+    int sleep, time;
+    int experience = 0;
     Dog pet2 = new Dog();
     Pengaioun pet1 = new Pengaioun();
     Cat pet3 = new Cat();
@@ -30,18 +32,22 @@ public class PetFinalTest {
     pet4.setAge(age);
     pet5.setAge(age);
     pet6.setAge(age);
-
+    System.out.println("Please entre the colour of pet: ");
+    colour = input.nextLine();
+    colour=input.nextLine();
+    pet1.setColour(colour);
+    pet2.setColour(colour);
+    pet3.setColour(colour);
+    pet4.setColour(colour);
+    pet5.setColour(colour);
+    pet6.setColour(colour);
     // 2、 select the type of pet
     System.out.print(
-      "Please select the type of pet u wannna adopt :((1) dog\n(2) penguin\n(3)Cat\n(4) Monkey\n(5)Dolphin\n(6)Tiger):"
-    );
+        "Please select the type of pet u wannna adopt :\n((1) dog\n(2) penguin\n(3)Cat\n(4) Monkey\n(5)Dolphin\n(6)Tiger):\n");
     switch (input.nextInt()) {
       case 1:
-        //If it's a dog, choose a dog breed
-        System.out.print(
-          "Please select a dog breed :((1) smart poodle " +
-          " (2) cool bulldog):"
-        );
+        // If it's a dog, choose a dog breed
+        System.out.print("Please select a dog breed :((1) smart poodle " + " (2) cool bulldog):");
         String breed = null;
         if (input.nextInt() == 1) {
           breed = "smart poodle";
@@ -55,7 +61,7 @@ public class PetFinalTest {
         int love = input.nextInt();
         pet2.setLove(love);
 
-        //  assign values
+        // assign values
         pet2.setName(name);
         pet2.setBreed(breed);
         // Print dog's information
@@ -81,12 +87,12 @@ public class PetFinalTest {
         } else {
           master.train(pet2);
           pet2.setHealth(health - 10);
-          pet2.setExperience(experience+1);
+          pet2.setExperience(experience + 1);
           pet2.setLove(love + 7);
           System.out.println("Now,\n");
           pet2.print();
         }
-        if (pet2.health <= 10) {
+        if (pet2.getHealth() <= 10) {
           System.out.println("Pet is Hungry!");
           System.out.println("U must have to feed ur pet.");
         }
@@ -97,13 +103,21 @@ public class PetFinalTest {
           master.feed(pet2);
           pet2.setHealth(health + 3);
           pet2.print();
+        } else {
+          System.out.println("Your pet want to sleep.let it sleep(1)yes(2)no: ");
+          sleep = input.nextInt();
+          if (sleep == 1) {
+            System.out.println("How long u want ur pet will sleep: ");
+            time = input.nextInt();
+            master.sleep(pet2);
+            pet2.setHealth(health + time);
+            pet2.print();
+          }
         }
         break;
       case 2:
         // 2.select the sex of penguin
-        System.out.print(
-          "Please choose the sex of the penguin:（1、Boy 2、Girl）:"
-        );
+        System.out.print("Please choose the sex of the penguin:（1、Boy 2、Girl）:");
         String sex = null;
         if (input.nextInt() == 1) {
           sex = "Boy";
@@ -145,7 +159,7 @@ public class PetFinalTest {
           System.out.println("Now,\n");
           pet1.print();
         }
-        if (pet1.health <= 10) {
+        if (pet1.getHealth() <= 10) {
           System.out.println("Pet is Hungry!");
           System.out.println("U must have to feed ur pet.");
         }
@@ -156,13 +170,20 @@ public class PetFinalTest {
           master.feed(pet1);
           pet1.setHealth(health + 5);
           pet1.print();
+        } else {
+          System.out.println("Your pet want to sleep.let it sleep(1)yes(2)no: ");
+          sleep = input.nextInt();
+          if (sleep == 1) {
+            System.out.println("How long u want ur pet will sleep: ");
+            time = input.nextInt();
+            master.sleep(pet1);
+            pet1.setHealth(health + time);
+            pet1.print();
+          }
         }
         break;
       case 3:
-        System.out.print(
-          "Please select a cat look :((1) Cute Cat Pussy " +
-          " (2) Augly Cat Tom):"
-        );
+        System.out.print("Please select a cat look :((1) Cute Cat Pussy " + " (2) Augly Cat Tom):");
         String look = null;
         if (input.nextInt() == 1) {
           look = "Cute Cat Pussy";
@@ -176,7 +197,7 @@ public class PetFinalTest {
         love = input.nextInt();
         pet3.setLove(love);
 
-        //  assign values
+        // assign values
         pet3.setName(name);
         pet3.setLook(look);
         System.out.println("Congress this cat is adopted by " + mastername);
@@ -218,6 +239,17 @@ public class PetFinalTest {
           master.feed(pet3);
           pet3.setHealth(health + 4);
           pet3.print();
+        } else {
+          System.out.println("Your pet want to sleep.let it sleep(1)yes(2)no: ");
+          sleep = input.nextInt();
+          if (sleep == 1) {
+            System.out.println("How long u want ur pet will sleep: ");
+            time = input.nextInt();
+            master.sleep(pet3);
+            pet3.setHealth(health + time);
+            pet3.print();
+          }
+
         }
         break;
       case 4:
@@ -275,12 +307,20 @@ public class PetFinalTest {
           master.feed(pet4);
           pet4.setHealth(health + 3);
           pet4.print();
+        } else {
+          System.out.println("Your pet want to sleep.let it sleep(1)yes(2)no: ");
+          sleep = input.nextInt();
+          if (sleep == 1) {
+            System.out.println("How long u want ur pet will sleep: ");
+            time = input.nextInt();
+            master.sleep(pet4);
+            pet4.setHealth(health + time);
+            pet4.print();
+          }
         }
         break;
-        case 5:
-        System.out.print(
-          "Please choose the type of the dolphin:（1、pilot whale 2、false killer whale）:"
-        );
+      case 5:
+        System.out.print("Please choose the type of the dolphin:（1、pilot whale 2、false killer whale）:");
         String type = null;
         if (input.nextInt() == 1) {
           type = "pilot whale";
@@ -333,13 +373,22 @@ public class PetFinalTest {
           master.feed(pet5);
           pet5.setHealth(health + 5);
           pet5.print();
+        }else {
+          System.out.println("Your pet want to sleep.let it sleep(1)yes(2)no: ");
+          sleep = input.nextInt();
+          if (sleep == 1) {
+            System.out.println("How long u want ur pet will sleep: ");
+            time = input.nextInt();
+            master.sleep(pet5);
+            pet5.setHealth(health + time);
+            pet5.print();
+          }
+
         }
         break;
-        case 6:
-        System.out.print(
-          "Please choose the sex of the tiger:（1、Tiger 2、Tigerss）:"
-        );
-         sex = null;
+      case 6:
+        System.out.print("Please choose the sex of the tiger:（1、Tiger 2、Tigerss）:");
+        sex = null;
         if (input.nextInt() == 1) {
           sex = "Tiger";
         } else {
@@ -375,7 +424,7 @@ public class PetFinalTest {
         } else {
           master.train(pet6);
           pet6.setHealth(health - 19);
-          pet6.setExperience(experience +1);
+          pet6.setExperience(experience + 1);
           pet6.setLove(love + 5);
           System.out.println("Now,\n");
           pet6.print();
@@ -391,9 +440,19 @@ public class PetFinalTest {
           master.feed(pet6);
           pet6.setHealth(health + 15);
           pet6.print();
+        } else {
+          System.out.println("Your pet want to sleep.let it sleep(1)yes(2)no: ");
+          sleep = input.nextInt();
+          if (sleep == 1) {
+            System.out.println("How long u want ur pet will sleep: ");
+            time = input.nextInt();
+            master.sleep(pet6);
+            pet6.setHealth(health + time);
+            pet6.print();
+          }
+
         }
-        
+        input.close();
     }
-    input.close();
   }
 }

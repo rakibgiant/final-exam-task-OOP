@@ -16,6 +16,10 @@ public class Tiger extends Pet {
       public void game() {
         System.out.println("I play jump throw fir Rring game .");
       }
+      public void sleep(){
+        System.out.println("I finished sleep. weak up after a beautiful sleep. ");
+    
+      }
     
       private String sex;
     

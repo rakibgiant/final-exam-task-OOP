@@ -27,7 +27,10 @@ public class Monkey extends Pet {
   public void setSex(String sex) {
     this.sex = sex;
   }
+  public void sleep(){
+    System.out.println("I finished sleep. weak up after a beautiful sleep. ");
 
+  }
   @Override
   public void print() {
     super.print();
