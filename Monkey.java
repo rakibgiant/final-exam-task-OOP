@@ -2,7 +2,7 @@ package petGameFinal;
 
 public class Monkey extends Pet {
 
-  public void eat() {
+  public void feed() {
     System.out.println("I eat Banana");
   }
 
