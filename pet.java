@@ -86,7 +86,7 @@ abstract class Pet {
     this.age = age;
   }
 
-  public abstract void eat();
+  public abstract void feed();
 
   public abstract void play();
 
