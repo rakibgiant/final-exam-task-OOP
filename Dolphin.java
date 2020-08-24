@@ -1,7 +1,7 @@
 package petGameFinal;
 
 public class Dolphin extends Pet {
-    public void eat() {
+    public void feed() {
         System.out.println("I eat Fish.");
       }
     
